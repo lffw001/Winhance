@@ -976,6 +976,7 @@ public static class GamingAndPerformanceOptimizations
                             EnabledScript = @"Get-NetAdapter | ForEach-Object { Set-DnsClientServerAddress -InterfaceIndex $_.InterfaceIndex -ServerAddresses @('{{primary}}','{{secondary}}') }",
                             DisabledScript = @"Get-NetAdapter | ForEach-Object { Set-DnsClientServerAddress -InterfaceIndex $_.InterfaceIndex -ResetServerAddresses }",
                             RequiresElevation = true,
+                            RunContext = RunContext.User,
                         },
                     },
                 },

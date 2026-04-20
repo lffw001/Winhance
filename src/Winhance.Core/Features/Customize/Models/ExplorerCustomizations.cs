@@ -1441,6 +1441,7 @@ if (Test-Path $appPathsKey) {
 }",
                             DisabledScript = null,
                             RequiresElevation = false,
+                            RunContext = RunContext.User,
                         },
                     },
                 },
